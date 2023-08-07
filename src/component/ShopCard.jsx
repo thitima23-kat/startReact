@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter,Image,Stack,Heading,Text,ButtonGroup,Button,Divider } from '@chakra-ui/react'
 
 export const ShopCard = () => {
   return (
