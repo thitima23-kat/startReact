@@ -62,14 +62,7 @@ export default function Navigation() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <Button
-              variant={'solid'}
-              colorScheme={'teal'}
-              size={'sm'}
-              mr={4}
-              leftIcon={<AddIcon />}>
-              Action
-            </Button>
+           
             <Menu>
               <MenuButton
                 as={Button}
@@ -78,7 +71,8 @@ export default function Navigation() {
                 cursor={'pointer'}
                 minW={0}>
                 <Avatar
-                  size={'sm'}
+                  height={50}
+                  size={'M'}
                   src={
                     'https://i.pinimg.com/550x/42/9a/3d/429a3dc212dd7d61938ef0c039b0cfbb.jpg'
                   }

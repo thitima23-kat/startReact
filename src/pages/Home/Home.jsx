@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Navigation from '../../component/Navigation';
-import { Wrap, WrapItem } from '@chakra-ui/react';
+import { Center, Wrap, WrapItem } from '@chakra-ui/react';
 import axios from 'axios';
 import { ShopCard } from '../../component/ShopCard';
 
@@ -12,11 +12,13 @@ export const Home = () => {
     axios.get('http://api_oh.udvc.ac.th/shop').then(res=>{
       setShop(res.data.data);
     })
-  },[shop]);
+  },[]);
 
   const warpItem = shop.map((item)=>
-  <WrapItem>
-    <ShopCard/>
+  <WrapItem key={item.id}>
+    <Center  w='300' h='400' bg='red.200' borderRadius={10}>
+    <ShopCard  id={item.id} name={item.name} photo={item.photo}/>
+    </Center>
   </WrapItem>
   )
 
@@ -24,7 +26,8 @@ export const Home = () => {
   return (
     <>
     <Navigation/>
-    <Wrap>{warpItem}</Wrap>
+    <Wrap spacing={'30'} justify={'center'} mt={'85px'}>
+      {warpItem}</Wrap>
 
     </>
   )
